@@ -31,7 +31,7 @@ def article_page(article_id):
 @app.route("/categories/<int:category_id>")  # Вказуємо url-адресу для виклику функції
 def category_page(category_id):
     articles = db.get_categories_articles(category_id)
-    return render_template("index.html", articles=articles)  # html-сторінка, що повертається у браузер
+    return render_template("search.html", articles=articles)  # html-сторінка, що повертається у браузер
 
 @app.route("/articles/new", methods=['GET','POST'])
 def new_article():
